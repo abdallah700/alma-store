@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALMA Store</title>
+  <style>
+    body {margin:0;font-family:Arial, sans-serif;background:#f5f7fb;color:#222}
+    header {background:#0b3d91;color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center}
+    header h1 {margin:0;color:#ff6a00}
+    nav a {color:#fff;margin:0 10px;text-decoration:none}
+    .hero {display:flex;align-items:center;justify-content:space-between;padding:50px;background:linear-gradient(120deg,#0b3d91,#1e5bd8);color:#fff}
+    .hero h2 {font-size:40px;margin-bottom:10px}
+    .btn {background:#ff6a00;color:#fff;padding:12px 20px;border:none;border-radius:5px;text-decoration:none}
+    .services {padding:40px;text-align:center}
+    .services h3 {color:#0b3d91}
+    .grid {display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+    .card {background:#fff;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);width:250px;cursor:pointer;text-decoration:none;color:#222}
+
+    .phones {padding:40px;background:#fff}
+    .phones h3 {text-align:center;color:#0b3d91}
+    .phone-grid {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px}
+
+    .phone-item {width:220px;text-align:center;background:#fff;border-radius:12px;padding:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s}
+    .phone-item:hover {transform:scale(1.05)}
+
+    .phone-item img {width:100%;border-radius:10px}
+
+    .whatsapp-btn {
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 15px;
+      background:#25D366;
+      color:#fff;
+      border-radius:5px;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .whatsapp-float {
+      position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    footer {background:#0b3d91;color:#fff;padding:20px;text-align:center}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ALMA Store</h1>
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#phones">Téléphones</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Téléphones, Ordinateurs & Accessoires</h2>
+    <p>Prix imbattables à Lubumbashi</p>
+    <a href="#services" class="btn">Nos Services</a>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <h3>Nos Services</h3>
+  <div class="grid">
+    <a href="#phones" class="card">📱 Vente Téléphones toutes marques</a>
+    <a href="#computers" class="card">💻 Vente Ordinateurs</a>
+    <a href="#accessories" class="card">🎧 Accessoires</a>
+    <a href="#installation" class="card">⚙️ Installation Systèmes</a>
+  </div>
+</section>
+
+<section id="phones" class="phones">
+  <h3>Nos Téléphones</h3>
+
+  <h4 style="text-align:center;">Samsung</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97">
+      <p>Samsung Galaxy S</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Samsung Galaxy S')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab">
+      <p>Samsung Série A</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Samsung Série A')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">iPhone</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+      <p>iPhone 14</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('iPhone 14')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+      <p>iPhone 13</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('iPhone 13')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">Petits Téléphones</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97">
+      <p>Téléphone simple</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Téléphone simple')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f">
+      <p>Feature phone</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Feature phone')">Commander</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION ORDINATEURS -->
+<section id="computers" class="phones">
+  <h3>Nos Ordinateurs</h3>
+
+  <h4 style="text-align:center;">Laptops</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
+      <p>HP EliteBook</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('HP EliteBook')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
+      <p>Dell XPS</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Dell XPS')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">MacBook</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
+      <p>MacBook Air</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('MacBook Air')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+      <p>MacBook Pro</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('MacBook Pro')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">Ordinateurs Bureau</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5">
+      <p>PC Desktop</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('PC Desktop')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5">
+      <p>All-in-One</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('All-in-One')">Commander</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION ACCESSOIRES -->
+<section id="accessories" class="phones">
+  <h3>Nos Accessoires</h3>
+
+  <h4 style="text-align:center;">Audio</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1512499617640-c2f999098c01">
+      <p>Casque Bluetooth</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Casque Bluetooth')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1518444028785-8f6f1a7e8f9a">
+      <p>Écouteurs sans fil</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Écouteurs sans fil')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">Chargeurs</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0">
+      <p>Chargeur rapide</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Chargeur rapide')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1609592806596-b43bada2f1c2">
+      <p>Power Bank</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Power Bank')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">Autres</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3">
+      <p>Clavier</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Clavier')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7">
+      <p>Souris</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Souris')">Commander</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION INSTALLATION SYSTEMES -->
+<section id="installation" class="phones">
+  <h3>Installation & Maintenance</h3>
+
+  <h4 style="text-align:center;">Systèmes</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1587202372775-98934b2cfd83">
+      <p>Installation Windows</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Installation Windows')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+      <p>Installation macOS</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Installation macOS')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">Logiciels</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8">
+      <p>Installation logiciels</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Installation logiciels')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3">
+      <p>Antivirus & sécurité</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Antivirus et sécurité')">Commander</a>
+    </div>
+  </div>
+
+  <h4 style="text-align:center;margin-top:30px;">Maintenance</h4>
+  <div class="phone-grid">
+    <div class="phone-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_Update_icon.png">
+      <p>Nettoyage & optimisation</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Nettoyage et optimisation')">Commander</a>
+    </div>
+    <div class="phone-item">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <p>Dépannage informatique</p>
+      <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Dépannage informatique')">Commander</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="services">
+  <h3>Contact</h3>
+  <p>📞 +243 997 375 104</p>
+  <p>📧 allianceabdallah@gmail.com</p>
+  <p>📍 212 avenue Kapenda, Lubumbashi</p>
+</section>
+
+<a href="https://api.whatsapp.com/send?phone=243997375104" class="whatsapp-float">💬</a>
+
+<footer>
+  <p>© 2026 ALMA Store</p>
+</footer>
+
+<script>
+function sendWhatsApp(product) {
+  const message = `Bonjour ALMA Store, je suis intéressé par ${product}`;
+  const url = `https://api.whatsapp.com/send?phone=243997375104&text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
