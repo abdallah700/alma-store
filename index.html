@@ -543,9 +543,77 @@
        FOOTER
   ========================== -->
   <footer>
-    <p>© 2026 ALMA Store - Tous droits réservés</p>
-  </footer>
 
+    <div class="footer-container">
+
+      <!-- ENTREPRISE -->
+      <div class="footer-box">
+        <h4>ALMA Store</h4>
+        <p>
+          ALMA Store est une entreprise spécialisée dans la vente de téléphones,
+          ordinateurs, accessoires informatiques et services de maintenance à Lubumbashi.
+          Il est appelé AlMA Store parcequ'il a été fondé par Alliance et Mamadou qui ont
+          Battu ce nom en vue de fournir les produits et services de qualité aux habitants
+          de Lubumbashi et de partout en RDC.
+        </p>
+
+        <p>📍 212 Avenue Kapenda, Lubumbashi - Réf CDI</p>
+        <p>📞 +243 997 375 104</p>
+        <p>📧 allianceabdallah@gmail.com</p>
+      </div>
+
+      <!-- LIENS RAPIDES -->
+      <div class="footer-box">
+        <h4>Liens Rapides</h4>
+
+        <a href="#phones">📱 Téléphones</a>
+        <a href="#computers">💻 Ordinateurs</a>
+        <a href="#accessories">🎧 Accessoires</a>
+        <a href="#installation">⚙️ Maintenance</a>
+        <a href="#contact">📞 Contact</a>
+      </div>
+
+      <!-- RESEAUX & HORAIRES -->
+      <div class="footer-box">
+        <h4>Informations</h4>
+
+        <p>🕒 Lun - Sam : 08h00 à 18h00</p>
+        <p>🚚 Livraison disponible à Lubumbashi</p>
+        <p>🔒 Produits garantis & services fiables</p>
+
+        <a href="https://wa.me/243892370459" target="_blank">💬 WhatsApp Business</a>
+        <a href="https://web.facebook.com/Alliance.Abdallah" target="_blank">📘 Facebook</a>
+        <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+      </div>
+
+      <!-- EQUIPE -->
+      <div class="footer-box">
+        <h4>Direction Générale</h4>
+
+        <div class="team-section">
+
+          <div class="team-card">
+            <img src="images/pdg1.jpg" alt="PDG ALMA Store">
+            <p><strong>Abdallah Pascal Alliance</strong></p>
+            <p>CEO & Fondateur</p>
+          </div>
+
+          <div class="team-card">
+            <img src="images/pdg2.jpg" alt="Co Fondateur">
+            <p><strong>Mamadou Diaby Traoré</strong></p>
+            <p>Co-Fondateur</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 ALMA Store — Tous droits réservés | Conçu avec passion à Lubumbashi 🇨🇩
+    </div>
+
+  </footer>
   <!-- =========================
        JAVASCRIPT
   ========================== -->
@@ -553,7 +621,7 @@
     function sendWhatsApp(product) {
       const message = `Bonjour ALMA Store, je suis intéressé par ${product}. Est-il disponible ?`;
 
-      const url = `https://api.whatsapp.com/send?phone=243997375104&text=${encodeURIComponent(message)}`;
+      const url = `https://api.whatsapp.com/send?phone=243892370459&text=${encodeURIComponent(message)}`;
 
       window.open(url, '_blank');
     }
