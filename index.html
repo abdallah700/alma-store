@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALMA Store</title>
+
+  <style>
+    /* =========================
+       RESET & GLOBAL STYLE
+    ========================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    header {
+      background: #0b3d91;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #ff6a00;
+      font-size: 32px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6a00;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+    .hero {
+      background: linear-gradient(120deg, #0b3d91, #1e5bd8);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff6a00;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e45c00;
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================== */
+    .trust {
+      background: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       SERVICES CARDS
+    ========================== */
+    .services {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h3,
+    .phones h3,
+    .location-section h3 {
+      color: #0b3d91;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      padding: 25px;
+      border-radius: 12px;
+      color: #222;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* =========================
+       PRODUCTS SECTION
+    ========================== */
+    .phones {
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .phones h4 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      color: #444;
+      font-size: 24px;
+    }
+
+    .phone-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .phone-item {
+      width: 230px;
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .phone-item:hover {
+      transform: scale(1.05);
+    }
+
+    .phone-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .phone-item p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .price {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #0b3d91;
+    }
+
+    .promo {
+      color: red;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 8px;
+      background: #ff6a00;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 12px;
+      background: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       LOCATION SECTION
+    ========================== */
+    .location-section {
+      padding: 50px 20px;
+      background: #eef3ff;
+      text-align: center;
+    }
+
+    .map-container {
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .location-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ff6a00;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       CONTACT SECTION
+    ========================== */
+    #contact p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP BUTTON
+    ========================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+    footer {
+      background: #0b3d91;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================== */
+    @media(max-width:768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      .phone-item,
+      .card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header>
+    <h1>ALMA Store</h1>
+
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#phones">Téléphones</a>
+      <a href="#computers">Ordinateurs</a>
+      <a href="#accessories">Accessoires</a>
+      <a href="#installation">Maintenance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+  <section class="hero">
+    <h2>Téléphones, Ordinateurs & Accessoires</h2>
+    <p>Prix imbattables à Lubumbashi</p>
+    <a href="#services" class="btn">Découvrir nos services</a>
+  </section>
+
+  <!-- =========================
+       TRUST SECTION
+  ========================== -->
+  <section class="trust">
+    ✅ +100 clients satisfaits | 🚚 Livraison rapide | 🔒 Produits garantis
+  </section>
+
+  <!-- =========================
+       SERVICES SECTION
+  ========================== -->
+  <section id="services" class="services">
+    <h3>Nos Services</h3>
+
+    <div class="grid">
+      <a href="#phones" class="card">📱 Vente Téléphones</a>
+      <a href="#computers" class="card">💻 Vente Ordinateurs</a>
+      <a href="#accessories" class="card">🎧 Accessoires</a>
+      <a href="#installation" class="card">⚙️ Installation Systèmes</a>
+    </div>
+  </section>
+
+  <!-- =========================
+       TELEPHONES
+  ========================== -->
+  <section id="phones" class="phones">
+    <h3>Nos Téléphones</h3>
+
+    <h4>Samsung</h4>
+    <div class="phone-grid">
+      <div class="phone-item">
+        <img src="images/SAMSUNGS25.jpg" alt="Samsung S25">
+        <p>Samsung Galaxy S25</p>
+        <div class="price">💰 950$</div>
+        <div class="badge">🔥 Nouveau</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Samsung Galaxy S25')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/SamsunggalaxyA56.jpg" alt="Samsung A56">
+        <p>Samsung Galaxy A56</p>
+        <div class="price">💰 350$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Samsung Galaxy A56')">Commander</a>
+      </div>
+    </div>
+
+    <h4>iPhone</h4>
+    <div class="phone-grid">
+      <div class="phone-item">
+        <img src="images/iphone14.jpg" alt="iPhone 14">
+        <p>iPhone 14</p>
+        <div class="price">💰 800$ <span class="promo">-10%</span></div>
+        <div class="badge">🔥 Best Seller</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('iPhone 14')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/iPhone13Pro.jpg" alt="iPhone 13 Pro">
+        <p>iPhone 13 Pro</p>
+        <div class="price">💰 700$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('iPhone 13 Pro')">Commander</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       ORDINATEURS
+  ========================== -->
+  <section id="computers" class="phones">
+    <h3>Nos Ordinateurs</h3>
+
+    <div class="phone-grid">
+      <div class="phone-item">
+        <img src="images/HPEliteBook.jpg" alt="HP EliteBook">
+        <p>HP EliteBook</p>
+        <div class="price">💰 650$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('HP EliteBook')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/DellXPS.jpg" alt="Dell XPS">
+        <p>Dell XPS</p>
+        <div class="price">💰 900$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Dell XPS')">Commander</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       ACCESSOIRES
+  ========================== -->
+  <section id="accessories" class="phones">
+    <h3>Nos Accessoires</h3>
+
+    <div class="phone-grid">
+      <div class="phone-item">
+        <img src="images/casque.jpg" alt="Casque Bluetooth">
+        <p>Casque Bluetooth</p>
+        <div class="price">💰 25$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Casque Bluetooth')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/Airpod.jpg" alt="AirPods">
+        <p>Écouteurs sans fil</p>
+        <div class="price">💰 20$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Écouteurs sans fil')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/PowerBank.jpg" alt="Power Bank">
+        <p>Power Bank</p>
+        <div class="price">💰 15$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Power Bank')">Commander</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       SERVICES TECHNIQUES
+  ========================== -->
+  <section id="installation" class="phones">
+    <h3>Installation & Maintenance</h3>
+
+    <div class="phone-grid">
+      <div class="phone-item">
+        <img src="images/installationWin11.jpg" alt="Installation Windows">
+        <p>Installation Windows 10/11</p>
+        <div class="price">💰 20$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Installation Windows')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/Antivirus&sécurité.jpg" alt="Antivirus">
+        <p>Antivirus & sécurité</p>
+        <div class="price">💰 15$</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Antivirus et sécurité')">Commander</a>
+      </div>
+
+      <div class="phone-item">
+        <img src="images/nettoyage.jpg" alt="Nettoyage PC">
+        <p>Nettoyage & optimisation</p>
+        <div class="price">💰 10$</div>
+        <div class="badge">⏱️ 15 min</div>
+        <a class="whatsapp-btn" href="#" onclick="sendWhatsApp('Nettoyage et optimisation')">Commander</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       LOCALISATION
+  ========================== -->
+  <section class="location-section">
+    <h3>📍 Notre Localisation</h3>
+
+    <p>212 avenue Kapenda, Lubumbashi - Réf CDI</p>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=212+avenue+Kapenda+Lubumbashi&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <a
+      class="location-btn"
+      href="https://www.google.com/maps/search/?api=1&query=212+avenue+Kapenda+Lubumbashi"
+      target="_blank">
+      📍 Ouvrir dans Google Maps
+    </a>
+  </section>
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+  <section id="contact" class="services">
+    <h3>Contact</h3>
+
+    <p>📞 +243 997 375 104</p>
+    <p>📧 allianceabdallah@gmail.com</p>
+    <p>📍 212 avenue Kapenda, Lubumbashi</p>
+  </section>
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================== -->
+  <a
+    href="https://api.whatsapp.com/send?phone=243997375104"
+    class="whatsapp-float"
+    target="_blank">
+    💬
+  </a>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
+    <p>© 2026 ALMA Store - Tous droits réservés</p>
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+  <script>
+    function sendWhatsApp(product) {
+      const message = `Bonjour ALMA Store, je suis intéressé par ${product}. Est-il disponible ?`;
+
+      const url = `https://api.whatsapp.com/send?phone=243997375104&text=${encodeURIComponent(message)}`;
+
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
