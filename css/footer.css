@@ -1,0 +1,97 @@
+
+
+    /* =========================
+       FOOTER PROFESSIONNEL
+    ========================== */
+    
+    footer {
+      background: #061f4a;
+      color: white;
+      padding: 50px 20px 20px;
+      margin-top: 30px;
+    }
+    
+    /* CONTENEUR PRINCIPAL */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    /* BLOCS FOOTER */
+    .footer-box {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    /* TITRES */
+    .footer-box h4 {
+      color: #ff6a00;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    
+    /* TEXTES ET LIENS */
+    .footer-box p,
+    .footer-box a {
+      color: #ddd;
+      margin-bottom: 10px;
+      display: block;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    
+    /* EFFET HOVER LIENS */
+    .footer-box a:hover {
+      color: #ff6a00;
+      transition: 0.3s;
+    }
+    
+    /* SECTION EQUIPE */
+    .team-section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    
+    /* CARTE MEMBRE */
+    .team-card {
+      text-align: center;
+    }
+    
+    /* PHOTO PROFIL */
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ff6a00;
+      margin-bottom: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    /* NOM DES DIRIGEANTS */
+    .team-card strong {
+      color: #fff;
+      font-size: 16px;
+    }
+    
+    /* TEXTE ROLE */
+    .team-card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    
+    /* BAS FOOTER */
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #bbb;
+    }

@@ -1,0 +1,58 @@
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+  background: #0b3d91;
+  color: white;
+
+  padding: 15px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* LOGO */
+
+header h1 {
+  color: #ff6a00;
+  font-size: 38px;
+}
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ff6a00;
+}
+
+/* HAMBURGER */
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: white;
+}
