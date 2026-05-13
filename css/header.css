@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 /* =========================================
    HEADER
@@ -56,3 +57,41 @@ nav a:hover {
   cursor: pointer;
   color: white;
 }
+=======
+/* =========================
+       HEADER
+    ========================== */
+    header {
+      background: #0b3d91;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #ff6a00;
+      font-size: 32px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6a00;
+    }
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd

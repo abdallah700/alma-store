@@ -12,6 +12,7 @@
   .team-section {
     justify-content: center;
   }
+<<<<<<< HEAD
   .contact-form {
     padding: 25px;
   }
@@ -21,10 +22,13 @@
     font-size: 14px;
   }
 }
+=======
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
 
     /* =========================
        RESPONSIVE DESIGN
     ========================== */
+<<<<<<< HEAD
 @media(max-width:768px) {
 
   .hero h2 {
@@ -131,10 +135,68 @@
   .card:hover {
     transform: translateY(-5px);
   }
+=======
+    @media(max-width:768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      .phone-item,
+      .card {
+        width: 100%;
+        max-width: 320px;
+      }
+
+}
+
+    /* =========================
+       SERVICES CARDS
+    ========================== */
+    .services {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h3,
+    .phones h3,
+    .location-section h3 {
+      color: #0b3d91;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      padding: 25px;
+      border-radius: 12px;
+      color: #222;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
 
     /* =========================
        PRODUCTS SECTION
     ========================== */
+<<<<<<< HEAD
   .phones {
     padding: 50px 20px;
     background: white;
@@ -212,10 +274,90 @@
     font-size: 14px;
     font-weight: bold;
   }
+=======
+    .phones {
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .phones h4 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      color: #444;
+      font-size: 24px;
+    }
+
+    .phone-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .phone-item {
+      width: 230px;
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .phone-item:hover {
+      transform: scale(1.05);
+    }
+
+    .phone-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .phone-item p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .price {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #0b3d91;
+    }
+
+    .promo {
+      color: red;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 8px;
+      background: #ff6a00;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 12px;
+      background: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
 
     /* =========================
        LOCATION SECTION
     ========================== */
+<<<<<<< HEAD
   .location-section {
     padding: 50px 20px;
     background: #eef3ff;
@@ -239,18 +381,51 @@
     border-radius: 8px;
     font-weight: bold;
   }
+=======
+    .location-section {
+      padding: 50px 20px;
+      background: #eef3ff;
+      text-align: center;
+    }
+
+    .map-container {
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .location-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ff6a00;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
 
     /* =========================
        CONTACT SECTION
     ========================== */
+<<<<<<< HEAD
   #contact p {
     margin-top: 10px;
     font-size: 18px;
   }
+=======
+    #contact p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
 
     /* =========================
        FLOATING WHATSAPP BUTTON
     ========================== */
+<<<<<<< HEAD
   .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -332,3 +507,21 @@
   }
 
 }
+=======
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+>>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
