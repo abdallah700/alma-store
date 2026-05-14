@@ -106,3 +106,69 @@
   opacity: 0.9;
 }
 
+/* =========================================
+   VIDEOS SECTION
+========================================= */
+
+.video-grid {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  margin-top: 40px;
+}
+
+.video-card {
+
+  width: 350px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+
+  text-align: center;
+}
+
+.video-card:hover {
+
+  transform: translateY(-8px);
+}
+
+.video-card video {
+
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  background: black;
+}
+
+.video-card h4 {
+
+  margin-top: 20px;
+
+  color: #0b3d91;
+
+  font-size: 22px;
+}
+
+.video-card p {
+
+  padding: 15px 20px 25px;
+
+  color: #555;
+}
+
