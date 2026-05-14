@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // =========================================
 // HAMBURGER MENU
 // =========================================
@@ -40,6 +39,3 @@ function sendWhatsApp(product) {
 
   window.open(url, '_blank');
 }
-=======
-
->>>>>>> 0f196267cf28f51f5fffb0f15317e6f5307f97bd
