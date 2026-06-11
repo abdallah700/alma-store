@@ -172,3 +172,22 @@
   color: #555;
 }
 
+.product-link,
+.phone-item a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+  display: block;
+}
+
+.phone-item img {
+
+  cursor: pointer;
+}
+
+.phone-item p {
+
+  cursor: pointer;
+}
