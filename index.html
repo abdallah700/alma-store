@@ -35,7 +35,30 @@
 
       <a href="index.html">Accueil</a>
       <a href="#services">Services</a>
-      <a href="pages/telephones.html">Téléphones</a>
+
+<div class="dropdown">
+
+      <a href="#">
+        Téléphones ▼
+      </a>
+
+      <div class="dropdown-content">
+
+        <a href="pages/iphone.html">
+          Apple iPhone
+        </a>
+
+        <a href="pages/samsung.html">
+          Samsung
+        </a>
+
+        <a href="pages/google-pixel.html">
+          Google Pixel
+        </a>
+
+      </div>
+
+</div>
       <a href="pages/ordinateurs.html">Ordinateurs</a>
       <a href="pages/accessoires.html">Accessoires</a>
       <a href="pages/maintenance.html">Maintenance</a>
@@ -97,40 +120,22 @@
 
   <!-- =========================
        PRODUITS VEDETTES
-  ========================== -->
+    ========================== -->
   
   <section class="services">
 
-    <h3> Produits Vedettes</h3>
+    <h3> Nos Produits</h3>
 
     <div class="phone-grid">
-    <a href="pages/telephones.html" class="product-link">
 
+    <a href="pages/iphone.html" class="product-link">
       <div class="phone-item">
 
-        <img src="images/SAMSUNGS25.jpg" alt="Samsung S25">
-
-        <p>Samsung Galaxy S25</p>
-
-        <div class="price">$</div>
-
-         <a class="whatsapp-btn"
-        onclick="sendWhatsApp('iPhone 14')">
-        Commander
-        </a>
-
-      </div>
-    </a>
-
-
-    <a href="pages/telephones.html" class="product-link">
-      <div class="phone-item">
-
-        <img src="images/iphone14.jpg" alt="iPhone 14">
+        <img src="images/iphones/iphone14.jpg" alt="iPhone 14">
 
         <p>iPhone 14</p>
 
-        <div class="price"> $</div>
+        <div class="price">En savoir plus</div>
 
         <a class="whatsapp-btn"
         onclick="sendWhatsApp('iPhone 14')">
@@ -139,21 +144,55 @@
       </div>
     </a>
 
-    <a href="pages/ordinateurs.html" class="product-link">
+    <a href="pages/samsung.html" class="product-link">
+
       <div class="phone-item">
 
-        <img src="images/HPEliteBook.jpg" alt="HP EliteBook">
+        <img src="images/samsungs/SamsungS25.jpg" alt="Samsung S25">
 
-        <p>HP EliteBook</p>
+        <p>Samsung Galaxy S25</p>
 
-        <div class="price"> $</div>
+        <div class="price">En savoir plus</div>
 
-        <a class="whatsapp-btn"
-        onclick="sendWhatsApp('HP EliteBook')">
+         <a class="whatsapp-btn"
+        onclick="sendWhatsApp('Samsung Galaxy S25')">
         Commander
         </a>
       </div>
     </a>
+
+      <a href="pages/google-pixel.html" class="product-link">
+        <div class="phone-item">
+
+          <img src="images/pixels/pixel8.jpg" alt="Google Pixel 8">
+
+          <p>Google Pixel 8</p>
+
+          <div class="price">En savoir plus</div>
+
+          <a class="whatsapp-btn"
+          onclick="sendWhatsApp('Google Pixel 8')">
+          Commander
+          </a>
+        </div>
+      </a>
+
+
+      <a href="pages/ordinateurs.html" class="product-link">
+        <div class="phone-item">
+
+          <img src="images/pcs/HPEliteBook.jpg" alt="HP EliteBook">
+
+          <p>HP EliteBook</p>
+
+          <div class="price">En savoir plus</div>
+
+          <a class="whatsapp-btn"
+          onclick="sendWhatsApp('HP EliteBook')">
+          Commander
+          </a>
+        </div>
+      </a>
     </div>
 </section>
 
@@ -163,11 +202,11 @@
 
       <div class="phone-item">
 
-        <img src="images/Airpod.jpg" alt="Airpod">
+        <img src="images/accessoires/Airpod.jpg" alt="Airpod">
 
         <p>Airpod</p>
 
-        <div class="price">$</div>
+        <div class="price">En savoir plus</div>
 
          <a class="whatsapp-btn"
         onclick="sendWhatsApp('iPhone 14')">
@@ -181,7 +220,7 @@
     <a href="pages/maintenance.html" class="product-link">
       <div class="phone-item">
 
-        <img src="images/installationWin11.jpg" alt="Installation Windows 11">
+        <img src="images/maintenances/installationWin11.jpg" alt="Installation Windows 11">
 
         <p>Installation Windows 11</p>
 
@@ -197,7 +236,7 @@
     <a href="pages/maintenance.html" class="product-link">
       <div class="phone-item">
 
-        <img src="images/OfficeInst.jpg" alt="offce installation">
+        <img src="images/maintenances/OfficeInst.jpg" alt="offce installation">
 
         <p>Installation Office</p>
 
@@ -231,7 +270,7 @@
 
       <div class="video-card">
 
-        <video controls poster="images/SAMSUNGS25.jpg">
+        <video controls poster="images/samsungs/SAMSUNGS25.jpg">
 
           <source src="videos/video1.mp4" type="video/mp4">
 
@@ -251,7 +290,7 @@
 
       <div class="video-card">
 
-        <video controls poster="images/iphone14.jpg">
+        <video controls poster="images/iphones/iphone14.jpg">
 
           <source src="videos/video2.mp4" type="video/mp4">
 
@@ -271,7 +310,7 @@
 
       <div class="video-card">
 
-        <video controls poster="images/HPEliteBook.jpg">
+        <video controls poster="images/pcs/HPEliteBook.jpg">
 
           <source src="videos/video3.mp4" type="video/mp4">
 
@@ -280,6 +319,7 @@
         <h4>Collection HPEliteBook</h4>
         <p>
           HPEliteBook dernière génération à prix imbattables. commandez dès maintenant.
+        </p>
       </div>
 
   </section>
@@ -302,7 +342,7 @@
 
     <div class="video-card">
 
-      <video controls poster="images/HPEliteBook.jpg">
+      <video controls poster="images/pcs/HPEliteBook.jpg">
 
         <source src="videos/VideoPc.mp4" type="video/mp4">
 
@@ -314,7 +354,7 @@
 
     <div class="video-card">
 
-      <video controls poster="images/SAMSUNGS25.jpg">
+      <video controls poster="images/samsungs/SAMSUNGS25.jpg">
 
          
 
@@ -328,7 +368,7 @@
 
     <div class="video-card">
 
-      <video controls poster="images/TableTemoigna.png">
+      <video controls poster="images/tablettes/TableTemoigna.png">
 
         <source src="videos/TemoignageTabletteEnfant.mp4" type="video/mp4">
 
@@ -493,11 +533,11 @@
       <div class="footer-box">
         <h4>Liens Rapides</h4>
 
-        <a href="pages/telephones.html">Téléphones</a>
-        <a href="pages/ordinateurs.html">Ordinateurs</a>
-        <a href="pages/accessoires.html">Accessoires</a>
-        <a href="pages/maintenance.html">Maintenance</a>
-        <a href="pages/contact.html">Contact</a>
+        <a href="#telephone">Téléphones</a>
+        <a href="#ordinateur">Ordinateurs</a>
+        <a href="#accessoire">Accessoires</a>
+        <a href="#maintenance">Maintenance</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <!-- RESEAUX & HORAIRES -->

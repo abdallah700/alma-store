@@ -4,6 +4,40 @@
    HEADER
 ========================================= */
 
+/* MENU DEROULANT */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #222;
+  padding: 12px 15px;
+  display: block;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  background: #f5f7fb;
+  color: #0b3d91;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 header {
   background: #0b3d91;
   color: white;
